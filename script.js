@@ -1,4 +1,13 @@
-// Get all buttons
+const samplePerson = {
+    name: 'Alice',
+    age: 25,
+    hobbies: ['reading', 'hiking', 'photography'],
+    address: {
+        street: '123 Main St',
+        city: 'San Diego',
+        state: 'CA'
+    }
+};// Get all buttons
 const errorBtns = Array.from(document.querySelectorAll('#error-btns > button'));
 
 // Add event listeners to each button
@@ -22,7 +31,15 @@ errorBtns.forEach(btn => {
             case 'Console Warn':
                 console.warn('Console Warn Button');
                 break;
-                
+
+            case 'Console Assert':
+                console.assert(samplePerson.age < 20, 'Console Assert Button');
+                break;
+
+            case 'Console Clear':
+                console.clear();
+                break;
+            
         }
     });
 }); 
