@@ -39,7 +39,24 @@ errorBtns.forEach(btn => {
             case 'Console Clear':
                 console.clear();
                 break;
-            
+
+            case 'Console Dir':
+                console.dir(samplePerson);
+                break;
+
+            case 'Console dirxml':
+                console.dirxml(document.querySelector('main'));
+                break;
+
+            case 'Console Group Start':
+                console.group('Console Group Start');
+                break;
+
+            case 'Console Group End':
+                console.groupEnd();
+                break;
+
+
         }
     });
 }); 
